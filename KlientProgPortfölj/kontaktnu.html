@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+
+
+    <!--* Sätter metainst. för dokumentet, importerar typsnitt, css och scripts -->
+    <title>Kontakta oss</title>
+    <link rel="stylesheet" href="mainCss1.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  </head>
+  <body>
+
+
+    <!--* Meny i fullskärmsläge -->
+    <div class="meny">
+      <ul class="deskUl">
+        <li class="active"><a href="index.html">Start</a></li>
+        <li><a href="omoss.html">Om oss</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="kontaktnu.html">Kontakta oss</a></li>
+      </ul>
+    </div>
+
+
+    <!--* Skapar en meny i mobilläge -->
+    <div class="navIcon">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+
+    <!--* Meny i mobilläge  -->
+    <div id="mobilMeny" class="navCont">
+      <div class="closeNav">X</div>
+      <ul class="navMenu">
+        <li>
+          <a href="index.html">Start</a>
+        </li>
+        <li>
+          <a href="omoss.html">Om oss</a>
+        </li>
+        <li>
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+          <a href="kontaktnu.html">Kontakta oss</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!--* Skapar div för att hålla rubrikerna -->
+    <div class="container">
+      <br/>
+      <br/>
+      <h1 id="ktkoss">Kontakta oss</h1>
+      <h2 id="skickam">Skicka ett meddelande</h2>
+    </div>
+
+    <br/>
+    <br/>
+
+
+    <!--* Skapar form för användaren att mata in data -->
+    <form
+      id="kontaktform"
+      class="form"
+      onsubmit="validerafnamn() && valideraenamn()">
+      <input type="text" name="fnamn" placeholder="Förnamn" required />
+      <br/>
+      <input type="text" name="enamn" placeholder="Efternamn" required />
+      <br/>
+      <input type="email" name="email" placeholder="Email" required />
+      <br/>
+      <input type="tel" name="phone" placeholder="Telefon" pattern="[0-9]{10}" required />
+      <br/>
+      <textarea name="meddelande" id="meddelande" placeholder="Skriv ditt meddelande här" required ></textarea>
+      <br/>
+      <button class="btn" id="btn" type="submit">Skicka</button>
+    </form>
+
+
+    <!--* Öppnar en div för ikonerna som sedan länkas till hemsidor för vidare kontakt -->
+    <!--* Target = 'blank' gör så att de öppnas i nya flikar -->
+    <div class="mediaIcons" id="icons">
+      <a href="https://www.oru.se/om-universitetet/kontakta-oss/" target="blank">
+      <img id="tele" src="bilder/phone.png" alt="phone" />
+    </a>
+      <a href="mailto:studentcentrum@oru.se">
+      <img id="mail" src="bilder/letter.png" alt="letter" />
+    </a>
+      <a href="https://goo.gl/maps/88cgQVRgtZrVtTF88" target="blank">
+      <img id="karta" src="bilder/location.png" alt="pin" />
+    </a>
+    </div>
+
+
+    <!--* Skapar div för kartan -->
+    <div id="map"></div>
+
+
+    <!--* Script som sätter kartan över Örebro Universitet och lägger in en pin för markering -->
+    <script>
+      var map = L.map('map').setView([59.2552, 15.2482], 15);
+      L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=kGj14NleEcRfjPrR4MvX', {
+      attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+      }).addTo(map);
+      var pil = L.marker([59.2552, 15.2482]).addTo(map);
+    </script>
+
+
+<!--* Importerar jquery och lokalt js-script -->
+    <script src="https://code.jquery.comhttps://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="mainJs.js"></script>
+  </body>
+</html>

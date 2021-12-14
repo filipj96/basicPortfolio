@@ -1,0 +1,575 @@
+
+body,html{ 
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(bilder/header.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+
+div.navCont{
+
+    display: none;
+}
+
+
+/*
+karta
+*/
+
+#map{height: 300px; 
+    width: 100%; 
+    max-width: 450px; 
+    bottom: 80%;
+    left: 5%;
+}
+
+
+
+/*
+
+MENY
+
+*/
+
+/* Meny i fullskärmsläge */
+.deskUl{
+    float: left;
+    list-style-type: none;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 30px;
+
+}
+
+.deskUl li{
+    display: inline-block;
+}
+
+.deskUl li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    transition: 0.6s ease;
+}
+
+.deskUl li a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* 
+
+INDEX 
+
+*/
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 50px;
+    padding: 2em;
+    text-shadow: 0.15em 0 2px #333333,
+    -0.025em -0.05em 0 #333333,
+    0.025em 0.05em 0 #333333
+}
+
+.underText{
+    font-size: 3vw;
+}
+
+.introText{
+
+    font-size: 10vw;
+    
+    }
+
+/*
+
+OM OSS 
+
+*/
+
+/*Knappar till respektive profilsida */
+
+.knappCont{
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 75%;
+    right: 0;
+}
+
+button{
+
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255);
+    width: 300px;
+    height: 100px;
+    padding: 12px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    font-size: 40px;
+    cursor: pointer;
+    border: 2px rgba(255, 255, 255, 0.60) solid;
+    transition: 0.6s ease;   
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.filipKnapp, .aliceKnapp, .billKnapp, .juliaKnapp{
+position: relative;
+right: 100px;
+
+}
+
+/* 
+
+PROFIL 
+
+*/ 
+
+.profilBild{
+    width: 25vw;
+    height: 30vw;
+    border-radius: 50%; 
+    margin-right: 60%; 
+    margin-top: 2%;
+}
+
+.persInfo{
+    color: white;
+    padding-left: 5%;
+}
+
+.omOssText{
+    font-size: 3vw;
+    color: rgb(248, 245, 245);
+    position: fixed;
+    right: 60%;
+    top: 13%;
+    padding: 5%;
+}
+
+
+/* Bar som visar kunskapsnivå */
+.progress{
+
+    width: 80%;
+    background-color: rgba(189, 178, 178, 0.2);
+    border-radius: 30px;
+    
+    }
+    
+.bar {
+    
+    height: 20px;
+    background-color: rgb(110, 224, 110);
+    text-align: center;
+    line-height: 20px;
+    color: grey;
+    border-radius: 30px;
+    font-weight: 900;
+    }
+
+
+/*
+
+PORTFOLIO
+
+*/
+
+#pRubrik{
+    color: white;
+    font-size: 150%;
+}
+.innehåll{
+    padding-top: 7%;
+    padding-left: 25%;
+    width: 50%;
+    text-align: center;
+}
+#bildSpel{
+    border: 25px solid rgba(0, 0, 0, 0.596);
+    height: auto;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+.pauseK {
+    width: 8%;
+    margin-left: 4%;
+    height: 8%;
+    cursor: pointer;
+}
+
+
+/*
+
+UTSEENDE I MOBILLÄGE
+
+*/
+
+@media(max-width: 768px){
+    
+
+
+    /*
+    karta mobil
+    */
+
+    #map{height: 300px; 
+        width: 90%; 
+        max-width: 600px; 
+        margin-bottom: 50px;
+        top: 30%;
+       }
+
+
+
+    /* Innehållet på portfoliosidan */
+    .innehåll{
+        padding-top: 40%;
+    }
+
+    /* Mobilmenyn */
+    .navIcon {
+        position: fixed;
+        top: 10px;
+        right: 50px;
+    }
+    
+    .navIcon div {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(244, 244, 248);
+        margin: 6px 0;
+    }
+    
+    .navCont{
+        position: fixed;
+        background: white;
+        width: 60%;
+        height: 100%;
+        right: 0px;
+        top: 0px;
+        border-left: 1px solid #aaa;
+        display: none;
+        z-index: 2;
+    
+    }
+    
+     .navMenu{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    
+    }
+    
+    .closeNav{
+        text-align: right;
+        font-size: 30px;
+        margin-right: 15px;
+    }
+    
+    .navMenu li {
+        font-size: 20px;
+        padding: 10px 15px;
+    
+    }
+
+    .navMenu li{
+        display: block  ;
+    }
+    
+    .navMenu li a{
+        text-decoration: none;
+        color: black;
+        padding: 5px 20px;
+        transition: 0.6s ease;
+        
+        
+    }
+    
+    .navMenu li a:hover{
+        background-color:white;
+        color: black;
+    }
+
+    .meny{
+        display: none;
+    }
+
+
+    /* Innehållet på om oss */
+    .knappCont{
+
+        left: 20%;
+        top: 15%;
+
+
+    }
+
+    .omOssText{
+        font-size: 3vw;
+        color: rgb(248, 245, 245);
+        position: fixed;
+        right: 0;
+        top: 5%;
+        padding: 5%;
+    
+    }
+
+    button{
+
+        background-color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255);
+        width: 75%;
+        height: 80px;
+        padding: 12px;
+        padding-left: 50px;
+        padding-right: 50px;
+        box-sizing: border-box;
+        font-size: 40px;
+        font-family: 'Raleway', sans-serif;
+        cursor: pointer;
+        border: 2px rgba(255, 255, 255, 0.60) solid;
+        transition: 0.6s ease;
+        
+    }
+
+    .filipKnapp, .aliceKnapp, .billKnapp, .juliaKnapp{
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        }
+
+
+       /* Innehållet på profilsidan */
+        .persInfo{
+
+            padding-top: 30vw;
+        }
+
+        div.divBild{
+
+            width: 100%;
+            height: 50%;
+            margin: auto;
+            padding: 5%;
+            position: relative;
+            top: 10%;
+            bottom: 0;
+            left: 25%;
+            right: 0;
+        
+        }
+
+}
+
+/*? ~~~~~ KONTAKTA OSS ~~~~~ */
+
+
+/*! ~~~~~ MOBILVERSION ~~~~~ */
+
+@media (max-width: 768px) {
+
+
+    /** Sätter attribut för containern med h1 och h2 */
+    .container {
+        position: relative;
+        display: block;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        top: 5%;
+        height: 8em;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+    }
+
+
+    /** Formar om knappen */
+    #btn {
+        width: 20vw;
+        height: 8vw;
+        position: relative;
+        left: 14.5%;
+        text-transform: uppercase;
+        text-align: center;
+        margin-left: 25%;
+        margin-right: 25%;
+        font-size: 3vw;
+        padding: 3px;
+        margin-top: 0.5em;
+    }
+
+
+    /** Ändrar utseende och position för de olika områden användaren fyller i */
+    #skickam {
+        font-size: 3vw;
+        padding: 8%;
+    }
+
+    #kontaktform input {
+        width: 60vw;
+        height: 8vw;
+        display: block;
+        border-radius: 4px;
+        position: relative;
+        margin: 0;
+        margin-top: 1em;
+        left: 18%;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    #meddelande {
+        position: relative;
+        left: 18%;
+        height: 20vw;
+        width: 60vw;
+        border-radius: 4px;  
+    }
+
+
+    /** Sätter storleken för div som innehåller ikonerna */
+    .mediaIcons {
+        width: 100%;
+        height: 0em;
+        position: relative;
+    }
+
+
+    /** Anpassar positioneringen för ikonerna inuti div */
+    #tele, #mail, #karta {
+        width: 13vw;
+        margin-right: 18vw;
+        position: relative;
+        left: 12%;
+    }
+}
+
+/*! ~~~~~ DESKTOPVERSION ~~~~~ */
+
+@media (min-width: 769px) {
+
+
+    /** Sätter attribut för containern med h1 och h2 */
+    .container {
+        padding-left: 4.6em;
+        padding-top: 3em;
+        top: 3em;
+        color: white;
+    }
+
+
+    /** Ger attribut till form */
+    .form :focus{
+        outline: 0;
+        border-color: #777;
+        box-shadow: 0px 0px 0px 1.5px #333333;
+        transition: box-shadow 0.15s linear;
+    }
+
+    .form input,
+    .form textarea {
+        border: 2.5px solid #ddd;
+        border-radius: 3px;
+        outline: none;
+        display: block;
+        background-color: rgba(179, 179, 179, 0.808);
+    }
+
+    .form input {
+        position: relative;
+        left: 5%;
+        width: 23em;
+        padding: 8px; 
+        transition: border-color ease;
+    }
+
+    .form textarea {
+        position: relative;
+        left: 5%;
+        padding-top: 4px;
+        padding-left: 4px;
+        width: 20em;
+        height: 8em;
+        max-width: 40vw;
+    }
+
+
+    /** Sätter storleken för div som innehåller ikonerna */
+    .mediaIcons {
+        width: 150%;
+        height: 100%;
+        position: relative;
+        top: 4em;
+        left: 7em;
+    }
+
+
+    /** Anpassar positioneringen för ikonerna inuti div */
+    #tele, #mail, #karta {
+        width: 2em;
+        height: 2em;
+        margin-right: 5em;
+        margin-bottom: 2vw;
+    }
+
+
+    /** Formar om knappen */
+    #btn {
+        position: absolute;
+        left: 14em;
+        width: 6em;
+        height: 2.5em;
+        padding: 2px;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;    
+    }
+
+
+    /** Ger effekter till knappen för att öka synlighet */
+    #btn:hover {
+        color:#474747;
+        border-color:#333333;
+    }
+
+    #btn:active {
+        color:#474747;
+        border-color:#BBBBBB; 
+    }
+}
